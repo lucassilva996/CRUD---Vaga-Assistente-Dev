@@ -1,0 +1,40 @@
+﻿@model CRUD.Entities.Product
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Adicionar</title>
+</head>
+<body>
+    <h3>Adicionar Produto</h3>
+    <form method="post" asp-controller="product" asp-action="add">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Nome</td>
+                <td>
+                    <input type="text" asp-for="Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>Valor</td>
+                <td>
+                    <input type="number" min="0" asp-for="Price" />
+                </td>
+            </tr>
+            <tr>
+                <td>Quantidade</td>
+                <td>
+                    <input type="number" min="0" asp-for="Quantity" />
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Salvar"/>
+                </td>
+
+        </table>
+    </form>
+
+</body>
+</html>
